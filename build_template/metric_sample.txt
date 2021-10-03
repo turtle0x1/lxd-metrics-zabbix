@@ -1,0 +1,651 @@
+# HELP lxd_cpu_seconds_total The total number of CPU seconds used in milliseconds.
+# TYPE lxd_cpu_seconds_total counter
+lxd_cpu_seconds_total{cpu="0",mode="system",name="lxd-build",project="default",type="container"} 3097
+lxd_cpu_seconds_total{cpu="0",mode="user",name="lxd-build",project="default",type="container"} 50065
+lxd_cpu_seconds_total{cpu="10",mode="system",name="lxd-build",project="default",type="container"} 8449
+lxd_cpu_seconds_total{cpu="10",mode="user",name="lxd-build",project="default",type="container"} 126718
+lxd_cpu_seconds_total{cpu="31",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="31",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="21",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="21",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="22",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="22",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="3",mode="system",name="lxd-build",project="default",type="container"} 1679
+lxd_cpu_seconds_total{cpu="3",mode="user",name="lxd-build",project="default",type="container"} 32220
+lxd_cpu_seconds_total{cpu="7",mode="system",name="lxd-build",project="default",type="container"} 347
+lxd_cpu_seconds_total{cpu="7",mode="user",name="lxd-build",project="default",type="container"} 6928
+lxd_cpu_seconds_total{cpu="16",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="16",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="17",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="17",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="25",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="25",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="28",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="28",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="1",mode="system",name="lxd-build",project="default",type="container"} 3585
+lxd_cpu_seconds_total{cpu="1",mode="user",name="lxd-build",project="default",type="container"} 57021
+lxd_cpu_seconds_total{cpu="6",mode="system",name="lxd-build",project="default",type="container"} 746
+lxd_cpu_seconds_total{cpu="6",mode="user",name="lxd-build",project="default",type="container"} 6549
+lxd_cpu_seconds_total{cpu="13",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="13",mode="user",name="lxd-build",project="default",type="container"} 6
+lxd_cpu_seconds_total{cpu="14",mode="system",name="lxd-build",project="default",type="container"} 7546
+lxd_cpu_seconds_total{cpu="14",mode="user",name="lxd-build",project="default",type="container"} 107462
+lxd_cpu_seconds_total{cpu="2",mode="system",name="lxd-build",project="default",type="container"} 737
+lxd_cpu_seconds_total{cpu="2",mode="user",name="lxd-build",project="default",type="container"} 14249
+lxd_cpu_seconds_total{cpu="9",mode="system",name="lxd-build",project="default",type="container"} 145
+lxd_cpu_seconds_total{cpu="9",mode="user",name="lxd-build",project="default",type="container"} 4025
+lxd_cpu_seconds_total{cpu="12",mode="system",name="lxd-build",project="default",type="container"} 69
+lxd_cpu_seconds_total{cpu="12",mode="user",name="lxd-build",project="default",type="container"} 1528
+lxd_cpu_seconds_total{cpu="15",mode="system",name="lxd-build",project="default",type="container"} 1054
+lxd_cpu_seconds_total{cpu="15",mode="user",name="lxd-build",project="default",type="container"} 18848
+lxd_cpu_seconds_total{cpu="20",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="20",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="30",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="30",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="11",mode="system",name="lxd-build",project="default",type="container"} 915
+lxd_cpu_seconds_total{cpu="11",mode="user",name="lxd-build",project="default",type="container"} 19799
+lxd_cpu_seconds_total{cpu="18",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="18",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="23",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="23",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="26",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="26",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="29",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="29",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="4",mode="system",name="lxd-build",project="default",type="container"} 2040
+lxd_cpu_seconds_total{cpu="4",mode="user",name="lxd-build",project="default",type="container"} 32415
+lxd_cpu_seconds_total{cpu="5",mode="system",name="lxd-build",project="default",type="container"} 3
+lxd_cpu_seconds_total{cpu="5",mode="user",name="lxd-build",project="default",type="container"} 31
+lxd_cpu_seconds_total{cpu="8",mode="system",name="lxd-build",project="default",type="container"} 545
+lxd_cpu_seconds_total{cpu="8",mode="user",name="lxd-build",project="default",type="container"} 11703
+lxd_cpu_seconds_total{cpu="19",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="19",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="24",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="24",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="27",mode="system",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="27",mode="user",name="lxd-build",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="2",mode="system",name="bgp-test",project="default",type="container"} 149
+lxd_cpu_seconds_total{cpu="2",mode="user",name="bgp-test",project="default",type="container"} 1713
+lxd_cpu_seconds_total{cpu="3",mode="system",name="bgp-test",project="default",type="container"} 130
+lxd_cpu_seconds_total{cpu="3",mode="user",name="bgp-test",project="default",type="container"} 1984
+lxd_cpu_seconds_total{cpu="15",mode="system",name="bgp-test",project="default",type="container"} 137
+lxd_cpu_seconds_total{cpu="15",mode="user",name="bgp-test",project="default",type="container"} 1921
+lxd_cpu_seconds_total{cpu="24",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="24",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="0",mode="system",name="bgp-test",project="default",type="container"} 160
+lxd_cpu_seconds_total{cpu="0",mode="user",name="bgp-test",project="default",type="container"} 1944
+lxd_cpu_seconds_total{cpu="10",mode="system",name="bgp-test",project="default",type="container"} 81
+lxd_cpu_seconds_total{cpu="10",mode="user",name="bgp-test",project="default",type="container"} 1497
+lxd_cpu_seconds_total{cpu="11",mode="system",name="bgp-test",project="default",type="container"} 151
+lxd_cpu_seconds_total{cpu="11",mode="user",name="bgp-test",project="default",type="container"} 1890
+lxd_cpu_seconds_total{cpu="16",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="16",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="20",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="20",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="7",mode="system",name="bgp-test",project="default",type="container"} 146
+lxd_cpu_seconds_total{cpu="7",mode="user",name="bgp-test",project="default",type="container"} 2016
+lxd_cpu_seconds_total{cpu="13",mode="system",name="bgp-test",project="default",type="container"} 106
+lxd_cpu_seconds_total{cpu="13",mode="user",name="bgp-test",project="default",type="container"} 1951
+lxd_cpu_seconds_total{cpu="12",mode="system",name="bgp-test",project="default",type="container"} 108
+lxd_cpu_seconds_total{cpu="12",mode="user",name="bgp-test",project="default",type="container"} 1672
+lxd_cpu_seconds_total{cpu="17",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="17",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="18",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="18",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="30",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="30",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="4",mode="system",name="bgp-test",project="default",type="container"} 143
+lxd_cpu_seconds_total{cpu="4",mode="user",name="bgp-test",project="default",type="container"} 2089
+lxd_cpu_seconds_total{cpu="23",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="23",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="27",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="27",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="28",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="28",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="9",mode="system",name="bgp-test",project="default",type="container"} 130
+lxd_cpu_seconds_total{cpu="9",mode="user",name="bgp-test",project="default",type="container"} 1966
+lxd_cpu_seconds_total{cpu="22",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="22",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="29",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="29",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="31",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="31",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="6",mode="system",name="bgp-test",project="default",type="container"} 131
+lxd_cpu_seconds_total{cpu="6",mode="user",name="bgp-test",project="default",type="container"} 1704
+lxd_cpu_seconds_total{cpu="19",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="19",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="21",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="21",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="25",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="25",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="1",mode="system",name="bgp-test",project="default",type="container"} 69
+lxd_cpu_seconds_total{cpu="1",mode="user",name="bgp-test",project="default",type="container"} 1862
+lxd_cpu_seconds_total{cpu="5",mode="system",name="bgp-test",project="default",type="container"} 116
+lxd_cpu_seconds_total{cpu="5",mode="user",name="bgp-test",project="default",type="container"} 1937
+lxd_cpu_seconds_total{cpu="8",mode="system",name="bgp-test",project="default",type="container"} 182
+lxd_cpu_seconds_total{cpu="8",mode="user",name="bgp-test",project="default",type="container"} 2454
+lxd_cpu_seconds_total{cpu="14",mode="system",name="bgp-test",project="default",type="container"} 99
+lxd_cpu_seconds_total{cpu="14",mode="user",name="bgp-test",project="default",type="container"} 1911
+lxd_cpu_seconds_total{cpu="26",mode="system",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="26",mode="user",name="bgp-test",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="1",mode="system",name="zoneminder",project="default",type="container"} 82975
+lxd_cpu_seconds_total{cpu="1",mode="user",name="zoneminder",project="default",type="container"} 3015858
+lxd_cpu_seconds_total{cpu="3",mode="system",name="zoneminder",project="default",type="container"} 99320
+lxd_cpu_seconds_total{cpu="3",mode="user",name="zoneminder",project="default",type="container"} 2899851
+lxd_cpu_seconds_total{cpu="8",mode="system",name="zoneminder",project="default",type="container"} 41464
+lxd_cpu_seconds_total{cpu="8",mode="user",name="zoneminder",project="default",type="container"} 1990233
+lxd_cpu_seconds_total{cpu="9",mode="system",name="zoneminder",project="default",type="container"} 77526
+lxd_cpu_seconds_total{cpu="9",mode="user",name="zoneminder",project="default",type="container"} 3215389
+lxd_cpu_seconds_total{cpu="21",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="21",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="5",mode="system",name="zoneminder",project="default",type="container"} 101714
+lxd_cpu_seconds_total{cpu="5",mode="user",name="zoneminder",project="default",type="container"} 3712034
+lxd_cpu_seconds_total{cpu="11",mode="system",name="zoneminder",project="default",type="container"} 173582
+lxd_cpu_seconds_total{cpu="11",mode="user",name="zoneminder",project="default",type="container"} 6602249
+lxd_cpu_seconds_total{cpu="17",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="17",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="18",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="18",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="28",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="28",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="10",mode="system",name="zoneminder",project="default",type="container"} 91065
+lxd_cpu_seconds_total{cpu="10",mode="user",name="zoneminder",project="default",type="container"} 3608247
+lxd_cpu_seconds_total{cpu="13",mode="system",name="zoneminder",project="default",type="container"} 92708
+lxd_cpu_seconds_total{cpu="13",mode="user",name="zoneminder",project="default",type="container"} 3881452
+lxd_cpu_seconds_total{cpu="14",mode="system",name="zoneminder",project="default",type="container"} 79262
+lxd_cpu_seconds_total{cpu="14",mode="user",name="zoneminder",project="default",type="container"} 2884567
+lxd_cpu_seconds_total{cpu="24",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="24",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="26",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="26",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="6",mode="system",name="zoneminder",project="default",type="container"} 84485
+lxd_cpu_seconds_total{cpu="6",mode="user",name="zoneminder",project="default",type="container"} 3819721
+lxd_cpu_seconds_total{cpu="12",mode="system",name="zoneminder",project="default",type="container"} 144287
+lxd_cpu_seconds_total{cpu="12",mode="user",name="zoneminder",project="default",type="container"} 6171269
+lxd_cpu_seconds_total{cpu="27",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="27",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="4",mode="system",name="zoneminder",project="default",type="container"} 72616
+lxd_cpu_seconds_total{cpu="4",mode="user",name="zoneminder",project="default",type="container"} 2586772
+lxd_cpu_seconds_total{cpu="16",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="16",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="19",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="19",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="25",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="25",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="29",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="29",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="2",mode="system",name="zoneminder",project="default",type="container"} 61618
+lxd_cpu_seconds_total{cpu="2",mode="user",name="zoneminder",project="default",type="container"} 2458278
+lxd_cpu_seconds_total{cpu="22",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="22",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="31",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="31",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="23",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="23",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="0",mode="system",name="zoneminder",project="default",type="container"} 41770
+lxd_cpu_seconds_total{cpu="0",mode="user",name="zoneminder",project="default",type="container"} 1938877
+lxd_cpu_seconds_total{cpu="7",mode="system",name="zoneminder",project="default",type="container"} 49239
+lxd_cpu_seconds_total{cpu="7",mode="user",name="zoneminder",project="default",type="container"} 2365618
+lxd_cpu_seconds_total{cpu="15",mode="system",name="zoneminder",project="default",type="container"} 61981
+lxd_cpu_seconds_total{cpu="15",mode="user",name="zoneminder",project="default",type="container"} 2667231
+lxd_cpu_seconds_total{cpu="20",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="20",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="30",mode="system",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="30",mode="user",name="zoneminder",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="2",mode="system",name="nsec-accounts",project="default",type="container"} 105
+lxd_cpu_seconds_total{cpu="2",mode="user",name="nsec-accounts",project="default",type="container"} 873
+lxd_cpu_seconds_total{cpu="4",mode="system",name="nsec-accounts",project="default",type="container"} 60
+lxd_cpu_seconds_total{cpu="4",mode="user",name="nsec-accounts",project="default",type="container"} 520
+lxd_cpu_seconds_total{cpu="6",mode="system",name="nsec-accounts",project="default",type="container"} 26
+lxd_cpu_seconds_total{cpu="6",mode="user",name="nsec-accounts",project="default",type="container"} 514
+lxd_cpu_seconds_total{cpu="11",mode="system",name="nsec-accounts",project="default",type="container"} 63
+lxd_cpu_seconds_total{cpu="11",mode="user",name="nsec-accounts",project="default",type="container"} 723
+lxd_cpu_seconds_total{cpu="26",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="26",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="29",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="29",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="1",mode="system",name="nsec-accounts",project="default",type="container"} 57
+lxd_cpu_seconds_total{cpu="1",mode="user",name="nsec-accounts",project="default",type="container"} 669
+lxd_cpu_seconds_total{cpu="7",mode="system",name="nsec-accounts",project="default",type="container"} 20
+lxd_cpu_seconds_total{cpu="7",mode="user",name="nsec-accounts",project="default",type="container"} 396
+lxd_cpu_seconds_total{cpu="9",mode="system",name="nsec-accounts",project="default",type="container"} 68
+lxd_cpu_seconds_total{cpu="9",mode="user",name="nsec-accounts",project="default",type="container"} 435
+lxd_cpu_seconds_total{cpu="16",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="16",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="19",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="19",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="21",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="21",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="22",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="22",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="23",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="23",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="24",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="24",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="31",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="31",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="0",mode="system",name="nsec-accounts",project="default",type="container"} 81
+lxd_cpu_seconds_total{cpu="0",mode="user",name="nsec-accounts",project="default",type="container"} 746
+lxd_cpu_seconds_total{cpu="13",mode="system",name="nsec-accounts",project="default",type="container"} 126
+lxd_cpu_seconds_total{cpu="13",mode="user",name="nsec-accounts",project="default",type="container"} 961
+lxd_cpu_seconds_total{cpu="5",mode="system",name="nsec-accounts",project="default",type="container"} 84
+lxd_cpu_seconds_total{cpu="5",mode="user",name="nsec-accounts",project="default",type="container"} 612
+lxd_cpu_seconds_total{cpu="10",mode="system",name="nsec-accounts",project="default",type="container"} 29
+lxd_cpu_seconds_total{cpu="10",mode="user",name="nsec-accounts",project="default",type="container"} 632
+lxd_cpu_seconds_total{cpu="12",mode="system",name="nsec-accounts",project="default",type="container"} 27
+lxd_cpu_seconds_total{cpu="12",mode="user",name="nsec-accounts",project="default",type="container"} 477
+lxd_cpu_seconds_total{cpu="18",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="18",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="20",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="20",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="28",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="28",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="14",mode="system",name="nsec-accounts",project="default",type="container"} 21
+lxd_cpu_seconds_total{cpu="14",mode="user",name="nsec-accounts",project="default",type="container"} 513
+lxd_cpu_seconds_total{cpu="17",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="17",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="27",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="27",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="3",mode="system",name="nsec-accounts",project="default",type="container"} 59
+lxd_cpu_seconds_total{cpu="3",mode="user",name="nsec-accounts",project="default",type="container"} 916
+lxd_cpu_seconds_total{cpu="8",mode="system",name="nsec-accounts",project="default",type="container"} 73
+lxd_cpu_seconds_total{cpu="8",mode="user",name="nsec-accounts",project="default",type="container"} 850
+lxd_cpu_seconds_total{cpu="15",mode="system",name="nsec-accounts",project="default",type="container"} 51
+lxd_cpu_seconds_total{cpu="15",mode="user",name="nsec-accounts",project="default",type="container"} 605
+lxd_cpu_seconds_total{cpu="25",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="25",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="30",mode="system",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{cpu="30",mode="user",name="nsec-accounts",project="default",type="container"} 0
+lxd_cpu_seconds_total{mode="iowait",name="v1",project="default",type="virtual-machine"} 590
+lxd_cpu_seconds_total{mode="irq",name="v1",project="default",type="virtual-machine"} 0
+lxd_cpu_seconds_total{mode="idle",name="v1",project="default",type="virtual-machine"} 142045700
+lxd_cpu_seconds_total{mode="nice",name="v1",project="default",type="virtual-machine"} 470
+lxd_cpu_seconds_total{mode="softirq",name="v1",project="default",type="virtual-machine"} 230
+lxd_cpu_seconds_total{mode="steal",name="v1",project="default",type="virtual-machine"} 280
+lxd_cpu_seconds_total{mode="system",name="v1",project="default",type="virtual-machine"} 12850
+lxd_cpu_seconds_total{mode="user",name="v1",project="default",type="virtual-machine"} 18180
+lxd_cpu_seconds_total{cpu="0",mode="iowait",name="v1",project="default",type="virtual-machine"} 590
+lxd_cpu_seconds_total{cpu="0",mode="irq",name="v1",project="default",type="virtual-machine"} 0
+lxd_cpu_seconds_total{cpu="0",mode="idle",name="v1",project="default",type="virtual-machine"} 142045700
+lxd_cpu_seconds_total{cpu="0",mode="nice",name="v1",project="default",type="virtual-machine"} 470
+lxd_cpu_seconds_total{cpu="0",mode="softirq",name="v1",project="default",type="virtual-machine"} 230
+lxd_cpu_seconds_total{cpu="0",mode="steal",name="v1",project="default",type="virtual-machine"} 280
+lxd_cpu_seconds_total{cpu="0",mode="system",name="v1",project="default",type="virtual-machine"} 12850
+lxd_cpu_seconds_total{cpu="0",mode="user",name="v1",project="default",type="virtual-machine"} 18180
+# HELP lxd_disk_read_bytes_total The total number of bytes read.
+# TYPE lxd_disk_read_bytes_total counter
+lxd_disk_read_bytes_total{device="zd0",name="lxd-build",project="default",type="container"} 0
+lxd_disk_read_bytes_total{device="dm-0",name="lxd-build",project="default",type="container"} 0
+lxd_disk_read_bytes_total{device="nvme0n1",name="lxd-build",project="default",type="container"} 163840
+lxd_disk_read_bytes_total{device="dm-1",name="lxd-build",project="default",type="container"} 163840
+lxd_disk_read_bytes_total{device="nvme0n1",name="bgp-test",project="default",type="container"} 28672
+lxd_disk_read_bytes_total{device="dm-1",name="bgp-test",project="default",type="container"} 28672
+lxd_disk_read_bytes_total{device="loop7",name="bgp-test",project="default",type="container"} 2048
+lxd_disk_read_bytes_total{device="nvme0n1",name="zoneminder",project="default",type="container"} 54411264
+lxd_disk_read_bytes_total{device="dm-1",name="zoneminder",project="default",type="container"} 54411264
+lxd_disk_read_bytes_total{device="loop27",name="nsec-accounts",project="default",type="container"} 7168
+lxd_disk_read_bytes_total{device="nvme0n1",name="nsec-accounts",project="default",type="container"} 4096
+lxd_disk_read_bytes_total{device="dm-1",name="nsec-accounts",project="default",type="container"} 4096
+lxd_disk_read_bytes_total{device="loop9",name="nsec-accounts",project="default",type="container"} 30720
+lxd_disk_read_bytes_total{device="loop6",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_read_bytes_total{device="loop7",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_read_bytes_total{device="loop2",name="v1",project="default",type="virtual-machine"} 19891200
+lxd_disk_read_bytes_total{device="loop4",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_read_bytes_total{device="loop5",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_read_bytes_total{device="sda",name="v1",project="default",type="virtual-machine"} 375974912
+lxd_disk_read_bytes_total{device="sda1",name="v1",project="default",type="virtual-machine"} 4403200
+lxd_disk_read_bytes_total{device="sda2",name="v1",project="default",type="virtual-machine"} 369372160
+lxd_disk_read_bytes_total{device="loop0",name="v1",project="default",type="virtual-machine"} 17531904
+lxd_disk_read_bytes_total{device="loop1",name="v1",project="default",type="virtual-machine"} 9815040
+lxd_disk_read_bytes_total{device="loop3",name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_disk_reads_completed_total The total number of completed reads.
+# TYPE lxd_disk_reads_completed_total counter
+lxd_disk_reads_completed_total{device="zd0",name="lxd-build",project="default",type="container"} 0
+lxd_disk_reads_completed_total{device="dm-0",name="lxd-build",project="default",type="container"} 0
+lxd_disk_reads_completed_total{device="nvme0n1",name="lxd-build",project="default",type="container"} 40
+lxd_disk_reads_completed_total{device="dm-1",name="lxd-build",project="default",type="container"} 40
+lxd_disk_reads_completed_total{device="nvme0n1",name="bgp-test",project="default",type="container"} 7
+lxd_disk_reads_completed_total{device="dm-1",name="bgp-test",project="default",type="container"} 7
+lxd_disk_reads_completed_total{device="loop7",name="bgp-test",project="default",type="container"} 1
+lxd_disk_reads_completed_total{device="nvme0n1",name="zoneminder",project="default",type="container"} 13284
+lxd_disk_reads_completed_total{device="dm-1",name="zoneminder",project="default",type="container"} 13284
+lxd_disk_reads_completed_total{device="loop27",name="nsec-accounts",project="default",type="container"} 5
+lxd_disk_reads_completed_total{device="nvme0n1",name="nsec-accounts",project="default",type="container"} 1
+lxd_disk_reads_completed_total{device="dm-1",name="nsec-accounts",project="default",type="container"} 1
+lxd_disk_reads_completed_total{device="loop9",name="nsec-accounts",project="default",type="container"} 2
+lxd_disk_reads_completed_total{device="loop6",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_reads_completed_total{device="loop7",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_reads_completed_total{device="loop2",name="v1",project="default",type="virtual-machine"} 18405
+lxd_disk_reads_completed_total{device="loop4",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_reads_completed_total{device="loop5",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_reads_completed_total{device="sda",name="v1",project="default",type="virtual-machine"} 7006
+lxd_disk_reads_completed_total{device="sda1",name="v1",project="default",type="virtual-machine"} 168
+lxd_disk_reads_completed_total{device="sda2",name="v1",project="default",type="virtual-machine"} 6733
+lxd_disk_reads_completed_total{device="loop0",name="v1",project="default",type="virtual-machine"} 16822
+lxd_disk_reads_completed_total{device="loop1",name="v1",project="default",type="virtual-machine"} 9289
+lxd_disk_reads_completed_total{device="loop3",name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_disk_written_bytes_total The total number of bytes written.
+# TYPE lxd_disk_written_bytes_total counter
+lxd_disk_written_bytes_total{device="zd0",name="lxd-build",project="default",type="container"} 0
+lxd_disk_written_bytes_total{device="dm-0",name="lxd-build",project="default",type="container"} 0
+lxd_disk_written_bytes_total{device="nvme0n1",name="lxd-build",project="default",type="container"} 0
+lxd_disk_written_bytes_total{device="dm-1",name="lxd-build",project="default",type="container"} 0
+lxd_disk_written_bytes_total{device="nvme0n1",name="bgp-test",project="default",type="container"} 0
+lxd_disk_written_bytes_total{device="dm-1",name="bgp-test",project="default",type="container"} 0
+lxd_disk_written_bytes_total{device="loop7",name="bgp-test",project="default",type="container"} 0
+lxd_disk_written_bytes_total{device="nvme0n1",name="zoneminder",project="default",type="container"} 0
+lxd_disk_written_bytes_total{device="dm-1",name="zoneminder",project="default",type="container"} 0
+lxd_disk_written_bytes_total{device="loop27",name="nsec-accounts",project="default",type="container"} 0
+lxd_disk_written_bytes_total{device="nvme0n1",name="nsec-accounts",project="default",type="container"} 0
+lxd_disk_written_bytes_total{device="dm-1",name="nsec-accounts",project="default",type="container"} 0
+lxd_disk_written_bytes_total{device="loop9",name="nsec-accounts",project="default",type="container"} 0
+lxd_disk_written_bytes_total{device="loop6",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_written_bytes_total{device="loop7",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_written_bytes_total{device="loop2",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_written_bytes_total{device="loop4",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_written_bytes_total{device="loop5",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_written_bytes_total{device="sda",name="v1",project="default",type="virtual-machine"} 823886336
+lxd_disk_written_bytes_total{device="sda1",name="v1",project="default",type="virtual-machine"} 512
+lxd_disk_written_bytes_total{device="sda2",name="v1",project="default",type="virtual-machine"} 823844864
+lxd_disk_written_bytes_total{device="loop0",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_written_bytes_total{device="loop1",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_written_bytes_total{device="loop3",name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_disk_writes_completed_total The total number of completed writes.
+# TYPE lxd_disk_writes_completed_total counter
+lxd_disk_writes_completed_total{device="zd0",name="lxd-build",project="default",type="container"} 2
+lxd_disk_writes_completed_total{device="dm-0",name="lxd-build",project="default",type="container"} 2
+lxd_disk_writes_completed_total{device="nvme0n1",name="lxd-build",project="default",type="container"} 0
+lxd_disk_writes_completed_total{device="dm-1",name="lxd-build",project="default",type="container"} 0
+lxd_disk_writes_completed_total{device="nvme0n1",name="bgp-test",project="default",type="container"} 0
+lxd_disk_writes_completed_total{device="dm-1",name="bgp-test",project="default",type="container"} 0
+lxd_disk_writes_completed_total{device="loop7",name="bgp-test",project="default",type="container"} 0
+lxd_disk_writes_completed_total{device="nvme0n1",name="zoneminder",project="default",type="container"} 0
+lxd_disk_writes_completed_total{device="dm-1",name="zoneminder",project="default",type="container"} 0
+lxd_disk_writes_completed_total{device="loop27",name="nsec-accounts",project="default",type="container"} 0
+lxd_disk_writes_completed_total{device="nvme0n1",name="nsec-accounts",project="default",type="container"} 0
+lxd_disk_writes_completed_total{device="dm-1",name="nsec-accounts",project="default",type="container"} 0
+lxd_disk_writes_completed_total{device="loop9",name="nsec-accounts",project="default",type="container"} 0
+lxd_disk_writes_completed_total{device="loop6",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_writes_completed_total{device="loop7",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_writes_completed_total{device="loop2",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_writes_completed_total{device="loop4",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_writes_completed_total{device="loop5",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_writes_completed_total{device="sda",name="v1",project="default",type="virtual-machine"} 6649
+lxd_disk_writes_completed_total{device="sda1",name="v1",project="default",type="virtual-machine"} 1
+lxd_disk_writes_completed_total{device="sda2",name="v1",project="default",type="virtual-machine"} 6475
+lxd_disk_writes_completed_total{device="loop0",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_writes_completed_total{device="loop1",name="v1",project="default",type="virtual-machine"} 0
+lxd_disk_writes_completed_total{device="loop3",name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_filesystem_avail_bytes The number of available space in bytes.
+# TYPE lxd_filesystem_avail_bytes gauge
+lxd_filesystem_avail_bytes{device="/home/stgraber/data/code/go/bin-build",fstype="zfs",mountpoint="/home/stgraber/go/bin/",name="lxd-build",project="default"} 670576934912
+lxd_filesystem_avail_bytes{device="/home/stgraber/data/code/lxc/lxd",fstype="zfs",mountpoint="/home/stgraber/go/src/github.com/lxc/lxd",name="lxd-build",project="default"} 670576934912
+lxd_filesystem_avail_bytes{device="/dev/sda1",fstype="0x4d44",mountpoint="/boot/efi",name="v1",project="default",type="virtual-machine"} 0
+lxd_filesystem_avail_bytes{device="/dev/sda2",fstype="ext4",mountpoint="/",name="v1",project="default",type="virtual-machine"} 0
+lxd_filesystem_avail_bytes{device="tmpfs",fstype="tmpfs",mountpoint="/var/snap/lxd/common/ns",name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_filesystem_free_bytes The number of free space in bytes.
+# TYPE lxd_filesystem_free_bytes gauge
+lxd_filesystem_free_bytes{device="/home/stgraber/data/code/go/bin-build",fstype="zfs",mountpoint="/home/stgraber/go/bin/",name="lxd-build",project="default"} 670576934912
+lxd_filesystem_free_bytes{device="/home/stgraber/data/code/lxc/lxd",fstype="zfs",mountpoint="/home/stgraber/go/src/github.com/lxc/lxd",name="lxd-build",project="default"} 670576934912
+lxd_filesystem_free_bytes{device="/dev/sda1",fstype="0x4d44",mountpoint="/boot/efi",name="v1",project="default",type="virtual-machine"} 0
+lxd_filesystem_free_bytes{device="/dev/sda2",fstype="ext4",mountpoint="/",name="v1",project="default",type="virtual-machine"} 0
+lxd_filesystem_free_bytes{device="tmpfs",fstype="tmpfs",mountpoint="/var/snap/lxd/common/ns",name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_filesystem_size_bytes The size of the filesystem in bytes.
+# TYPE lxd_filesystem_size_bytes gauge
+lxd_filesystem_size_bytes{device="/home/stgraber/data/code/go/bin-build",fstype="zfs",mountpoint="/home/stgraber/go/bin/",name="lxd-build",project="default"} 749937885184
+lxd_filesystem_size_bytes{device="/home/stgraber/data/code/lxc/lxd",fstype="zfs",mountpoint="/home/stgraber/go/src/github.com/lxc/lxd",name="lxd-build",project="default"} 749937885184
+lxd_filesystem_size_bytes{device="/dev/sda1",fstype="0x4d44",mountpoint="/boot/efi",name="v1",project="default",type="virtual-machine"} 103227392
+lxd_filesystem_size_bytes{device="/dev/sda2",fstype="ext4",mountpoint="/",name="v1",project="default",type="virtual-machine"} 9523453952
+lxd_filesystem_size_bytes{device="tmpfs",fstype="tmpfs",mountpoint="/var/snap/lxd/common/ns",name="v1",project="default",type="virtual-machine"} 1048576
+# HELP lxd_memory_Active_anon_bytes The amount of anonymous memory on active LRU list.
+# TYPE lxd_memory_Active_anon_bytes gauge
+lxd_memory_Active_anon_bytes{name="lxd-build",project="default",type="container"} 3379200
+lxd_memory_Active_anon_bytes{name="bgp-test",project="default",type="container"} 1867776
+lxd_memory_Active_anon_bytes{name="zoneminder",project="default",type="container"} 191315968
+lxd_memory_Active_anon_bytes{name="nsec-accounts",project="default",type="container"} 159744
+lxd_memory_Active_anon_bytes{name="v1",project="default",type="virtual-machine"} 81108992
+# HELP lxd_memory_Active_file_bytes The amount of file-backed memory on active LRU list.
+# TYPE lxd_memory_Active_file_bytes gauge
+lxd_memory_Active_file_bytes{name="lxd-build",project="default",type="container"} 4341760
+lxd_memory_Active_file_bytes{name="bgp-test",project="default",type="container"} 1114112
+lxd_memory_Active_file_bytes{name="zoneminder",project="default",type="container"} 11128832
+lxd_memory_Active_file_bytes{name="nsec-accounts",project="default",type="container"} 1138688
+lxd_memory_Active_file_bytes{name="v1",project="default",type="virtual-machine"} 295501824
+# HELP lxd_memory_Active_bytes The amount of memory on active LRU list.
+# TYPE lxd_memory_Active_bytes gauge
+lxd_memory_Active_bytes{name="lxd-build",project="default",type="container"} 7720960
+lxd_memory_Active_bytes{name="bgp-test",project="default",type="container"} 2981888
+lxd_memory_Active_bytes{name="zoneminder",project="default",type="container"} 202444800
+lxd_memory_Active_bytes{name="nsec-accounts",project="default",type="container"} 1298432
+lxd_memory_Active_bytes{name="v1",project="default",type="virtual-machine"} 376610816
+# HELP lxd_memory_Cached_bytes The amount of cached memory.
+# TYPE lxd_memory_Cached_bytes gauge
+lxd_memory_Cached_bytes{name="lxd-build",project="default",type="container"} 7970816
+lxd_memory_Cached_bytes{name="bgp-test",project="default",type="container"} 2183168
+lxd_memory_Cached_bytes{name="zoneminder",project="default",type="container"} 4471349248
+lxd_memory_Cached_bytes{name="nsec-accounts",project="default",type="container"} 2121728
+lxd_memory_Cached_bytes{name="v1",project="default",type="virtual-machine"} 660217856
+# HELP lxd_memory_Dirty_bytes The amount of memory waiting to get written back to the disk.
+# TYPE lxd_memory_Dirty_bytes gauge
+lxd_memory_Dirty_bytes{name="lxd-build",project="default",type="container"} 6934528
+lxd_memory_Dirty_bytes{name="lxd-build",project="default",type="container"} 0
+lxd_memory_Dirty_bytes{name="bgp-test",project="default",type="container"} 2060288
+lxd_memory_Dirty_bytes{name="bgp-test",project="default",type="container"} 0
+lxd_memory_Dirty_bytes{name="zoneminder",project="default",type="container"} 13385728
+lxd_memory_Dirty_bytes{name="zoneminder",project="default",type="container"} 0
+lxd_memory_Dirty_bytes{name="nsec-accounts",project="default",type="container"} 2019328
+lxd_memory_Dirty_bytes{name="nsec-accounts",project="default",type="container"} 0
+lxd_memory_Dirty_bytes{name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_memory_HugepagesFree_bytes The amount of free memory for hugetlb.
+# TYPE lxd_memory_HugepagesFree_bytes gauge
+lxd_memory_HugepagesFree_bytes{name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_memory_HugepagesTotal_bytes The amount of used memory for hugetlb.
+# TYPE lxd_memory_HugepagesTotal_bytes gauge
+lxd_memory_HugepagesTotal_bytes{name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_memory_Inactive_anon_bytes The amount of file-backed memory on inactive LRU list.
+# TYPE lxd_memory_Inactive_anon_bytes gauge
+lxd_memory_Inactive_anon_bytes{name="lxd-build",project="default",type="container"} 41431040
+lxd_memory_Inactive_anon_bytes{name="bgp-test",project="default",type="container"} 12763136
+lxd_memory_Inactive_anon_bytes{name="zoneminder",project="default",type="container"} 4577435648
+lxd_memory_Inactive_anon_bytes{name="nsec-accounts",project="default",type="container"} 18022400
+lxd_memory_Inactive_anon_bytes{name="v1",project="default",type="virtual-machine"} 11112448
+# HELP lxd_memory_Inactive_file_bytes The amount of file-backed memory on inactive LRU list.
+# TYPE lxd_memory_Inactive_file_bytes gauge
+lxd_memory_Inactive_file_bytes{name="lxd-build",project="default",type="container"} 3010560
+lxd_memory_Inactive_file_bytes{name="bgp-test",project="default",type="container"} 958464
+lxd_memory_Inactive_file_bytes{name="zoneminder",project="default",type="container"} 2850816
+lxd_memory_Inactive_file_bytes{name="nsec-accounts",project="default",type="container"} 888832
+lxd_memory_Inactive_file_bytes{name="v1",project="default",type="virtual-machine"} 414662656
+# HELP lxd_memory_Inactive_bytes The amount of memory on inactive LRU list.
+# TYPE lxd_memory_Inactive_bytes gauge
+lxd_memory_Inactive_bytes{name="lxd-build",project="default",type="container"} 44441600
+lxd_memory_Inactive_bytes{name="bgp-test",project="default",type="container"} 13721600
+lxd_memory_Inactive_bytes{name="zoneminder",project="default",type="container"} 4580286464
+lxd_memory_Inactive_bytes{name="nsec-accounts",project="default",type="container"} 18911232
+lxd_memory_Inactive_bytes{name="v1",project="default",type="virtual-machine"} 425775104
+# HELP lxd_memory_Mapped_bytes The amount of mapped memory.
+# TYPE lxd_memory_Mapped_bytes gauge
+lxd_memory_Mapped_bytes{name="v1",project="default",type="virtual-machine"} 92663808
+# HELP lxd_memory_MemAvailable_bytes The amount of available memory.
+# TYPE lxd_memory_MemAvailable_bytes gauge
+lxd_memory_MemAvailable_bytes{name="lxd-build",project="default",type="container"} 9223372036854771712
+lxd_memory_MemAvailable_bytes{name="bgp-test",project="default",type="container"} 9223372036854771712
+lxd_memory_MemAvailable_bytes{name="zoneminder",project="default",type="container"} 9223372036854771712
+lxd_memory_MemAvailable_bytes{name="nsec-accounts",project="default",type="container"} 9223372036854771712
+lxd_memory_MemAvailable_bytes{name="v1",project="default",type="virtual-machine"} 716845056
+# HELP lxd_memory_MemFree_bytes The amount of free memory.
+# TYPE lxd_memory_MemFree_bytes gauge
+lxd_memory_MemFree_bytes{name="lxd-build",project="default",type="container"} 9223372036768043008
+lxd_memory_MemFree_bytes{name="bgp-test",project="default",type="container"} 9223372036827369472
+lxd_memory_MemFree_bytes{name="zoneminder",project="default",type="container"} 9223372031948943360
+lxd_memory_MemFree_bytes{name="nsec-accounts",project="default",type="container"} 9223372036822638592
+lxd_memory_MemFree_bytes{name="v1",project="default",type="virtual-machine"} 117014528
+# HELP lxd_memory_MemTotal_bytes The amount of used memory.
+# TYPE lxd_memory_MemTotal_bytes gauge
+lxd_memory_MemTotal_bytes{name="lxd-build",project="default",type="container"} 86728704
+lxd_memory_MemTotal_bytes{name="bgp-test",project="default",type="container"} 27402240
+lxd_memory_MemTotal_bytes{name="zoneminder",project="default",type="container"} 4905828352
+lxd_memory_MemTotal_bytes{name="nsec-accounts",project="default",type="container"} 32133120
+lxd_memory_MemTotal_bytes{name="v1",project="default",type="virtual-machine"} 1024876544
+# HELP lxd_memory_RSS_bytes The amount of anonymous and swap cache memory.
+# TYPE lxd_memory_RSS_bytes gauge
+lxd_memory_RSS_bytes{name="lxd-build",project="default",type="container"} 42913792
+lxd_memory_RSS_bytes{name="bgp-test",project="default",type="container"} 13443072
+lxd_memory_RSS_bytes{name="zoneminder",project="default",type="container"} 263077888
+lxd_memory_RSS_bytes{name="nsec-accounts",project="default",type="container"} 17862656
+lxd_memory_RSS_bytes{name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_memory_Shmem_bytes The amount of cached filesystem data that is swap-backed.
+# TYPE lxd_memory_Shmem_bytes gauge
+lxd_memory_Shmem_bytes{name="lxd-build",project="default",type="container"} 618496
+lxd_memory_Shmem_bytes{name="bgp-test",project="default",type="container"} 110592
+lxd_memory_Shmem_bytes{name="zoneminder",project="default",type="container"} 4457771008
+lxd_memory_Shmem_bytes{name="nsec-accounts",project="default",type="container"} 94208
+lxd_memory_Shmem_bytes{name="v1",project="default",type="virtual-machine"} 12132352
+# HELP lxd_memory_Swap_bytes The amount of used swap memory.
+# TYPE lxd_memory_Swap_bytes gauge
+lxd_memory_Swap_bytes{name="lxd-build",project="default",type="container"} 8962048
+lxd_memory_Swap_bytes{name="bgp-test",project="default",type="container"} 5033984
+lxd_memory_Swap_bytes{name="zoneminder",project="default",type="container"} 330711040
+lxd_memory_Swap_bytes{name="nsec-accounts",project="default",type="container"} 1982464
+lxd_memory_Swap_bytes{name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_memory_Unevictable_bytes The amount of unevictable memory.
+# TYPE lxd_memory_Unevictable_bytes gauge
+lxd_memory_Unevictable_bytes{name="lxd-build",project="default",type="container"} 0
+lxd_memory_Unevictable_bytes{name="bgp-test",project="default",type="container"} 0
+lxd_memory_Unevictable_bytes{name="zoneminder",project="default",type="container"} 65536
+lxd_memory_Unevictable_bytes{name="nsec-accounts",project="default",type="container"} 0
+lxd_memory_Unevictable_bytes{name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_memory_Writeback_bytes The amount of memory queued for syncing to disk.
+# TYPE lxd_memory_Writeback_bytes gauge
+lxd_memory_Writeback_bytes{name="lxd-build",project="default",type="container"} 0
+lxd_memory_Writeback_bytes{name="bgp-test",project="default",type="container"} 0
+lxd_memory_Writeback_bytes{name="zoneminder",project="default",type="container"} 0
+lxd_memory_Writeback_bytes{name="nsec-accounts",project="default",type="container"} 0
+lxd_memory_Writeback_bytes{name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_network_receive_bytes_total The amount of received bytes on a given interface.
+# TYPE lxd_network_receive_bytes_total counter
+lxd_network_receive_bytes_total{device="lo",name="lxd-build",project="default",type="container"} 100693
+lxd_network_receive_bytes_total{device="eth0",name="lxd-build",project="default",type="container"} 281231097
+lxd_network_receive_bytes_total{device="lo",name="bgp-test",project="default",type="container"} 0
+lxd_network_receive_bytes_total{device="eth0",name="bgp-test",project="default",type="container"} 18558860
+lxd_network_receive_bytes_total{device="docker0",name="zoneminder",project="default",type="container"} 0
+lxd_network_receive_bytes_total{device="br-ad39f2cab933",name="zoneminder",project="default",type="container"} 35991649126
+lxd_network_receive_bytes_total{device="veth716d100",name="zoneminder",project="default",type="container"} 45420165846
+lxd_network_receive_bytes_total{device="eth0",name="zoneminder",project="default",type="container"} 2138818844819
+lxd_network_receive_bytes_total{device="lo",name="zoneminder",project="default",type="container"} 2212
+lxd_network_receive_bytes_total{device="lo",name="nsec-accounts",project="default",type="container"} 6802
+lxd_network_receive_bytes_total{device="eth0",name="nsec-accounts",project="default",type="container"} 10078423
+lxd_network_receive_bytes_total{device="lo",name="v1",project="default",type="virtual-machine"} 20154
+lxd_network_receive_bytes_total{device="enp5s0",name="v1",project="default",type="virtual-machine"} 213141621
+# HELP lxd_network_receive_drop_total The amount of received dropped bytes on a given interface.
+# TYPE lxd_network_receive_drop_total counter
+lxd_network_receive_drop_total{device="lo",name="lxd-build",project="default",type="container"} 0
+lxd_network_receive_drop_total{device="eth0",name="lxd-build",project="default",type="container"} 0
+lxd_network_receive_drop_total{device="lo",name="bgp-test",project="default",type="container"} 0
+lxd_network_receive_drop_total{device="eth0",name="bgp-test",project="default",type="container"} 0
+lxd_network_receive_drop_total{device="docker0",name="zoneminder",project="default",type="container"} 0
+lxd_network_receive_drop_total{device="br-ad39f2cab933",name="zoneminder",project="default",type="container"} 0
+lxd_network_receive_drop_total{device="veth716d100",name="zoneminder",project="default",type="container"} 0
+lxd_network_receive_drop_total{device="eth0",name="zoneminder",project="default",type="container"} 0
+lxd_network_receive_drop_total{device="lo",name="zoneminder",project="default",type="container"} 0
+lxd_network_receive_drop_total{device="lo",name="nsec-accounts",project="default",type="container"} 0
+lxd_network_receive_drop_total{device="eth0",name="nsec-accounts",project="default",type="container"} 0
+lxd_network_receive_drop_total{device="lo",name="v1",project="default",type="virtual-machine"} 0
+lxd_network_receive_drop_total{device="enp5s0",name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_network_receive_errs_total The amount of received errors on a given interface.
+# TYPE lxd_network_receive_errs_total counter
+lxd_network_receive_errs_total{device="lo",name="lxd-build",project="default",type="container"} 0
+lxd_network_receive_errs_total{device="eth0",name="lxd-build",project="default",type="container"} 0
+lxd_network_receive_errs_total{device="lo",name="bgp-test",project="default",type="container"} 0
+lxd_network_receive_errs_total{device="eth0",name="bgp-test",project="default",type="container"} 0
+lxd_network_receive_errs_total{device="docker0",name="zoneminder",project="default",type="container"} 0
+lxd_network_receive_errs_total{device="br-ad39f2cab933",name="zoneminder",project="default",type="container"} 0
+lxd_network_receive_errs_total{device="veth716d100",name="zoneminder",project="default",type="container"} 0
+lxd_network_receive_errs_total{device="eth0",name="zoneminder",project="default",type="container"} 0
+lxd_network_receive_errs_total{device="lo",name="zoneminder",project="default",type="container"} 0
+lxd_network_receive_errs_total{device="lo",name="nsec-accounts",project="default",type="container"} 0
+lxd_network_receive_errs_total{device="eth0",name="nsec-accounts",project="default",type="container"} 0
+lxd_network_receive_errs_total{device="lo",name="v1",project="default",type="virtual-machine"} 0
+lxd_network_receive_errs_total{device="enp5s0",name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_network_receive_packets_total The amount of received packets on a given interface.
+# TYPE lxd_network_receive_packets_total counter
+lxd_network_receive_packets_total{device="lo",name="lxd-build",project="default",type="container"} 853
+lxd_network_receive_packets_total{device="eth0",name="lxd-build",project="default",type="container"} 203780
+lxd_network_receive_packets_total{device="lo",name="bgp-test",project="default",type="container"} 0
+lxd_network_receive_packets_total{device="eth0",name="bgp-test",project="default",type="container"} 123517
+lxd_network_receive_packets_total{device="docker0",name="zoneminder",project="default",type="container"} 0
+lxd_network_receive_packets_total{device="br-ad39f2cab933",name="zoneminder",project="default",type="container"} 673465480
+lxd_network_receive_packets_total{device="veth716d100",name="zoneminder",project="default",type="container"} 673465480
+lxd_network_receive_packets_total{device="eth0",name="zoneminder",project="default",type="container"} 950243030
+lxd_network_receive_packets_total{device="lo",name="zoneminder",project="default",type="container"} 28
+lxd_network_receive_packets_total{device="lo",name="nsec-accounts",project="default",type="container"} 86
+lxd_network_receive_packets_total{device="eth0",name="nsec-accounts",project="default",type="container"} 66074
+lxd_network_receive_packets_total{device="lo",name="v1",project="default",type="virtual-machine"} 206
+lxd_network_receive_packets_total{device="enp5s0",name="v1",project="default",type="virtual-machine"} 51610
+# HELP lxd_network_transmit_bytes_total The amount of transmitted bytes on a given interface.
+# TYPE lxd_network_transmit_bytes_total counter
+lxd_network_transmit_bytes_total{device="lo",name="lxd-build",project="default",type="container"} 100693
+lxd_network_transmit_bytes_total{device="eth0",name="lxd-build",project="default",type="container"} 6204041
+lxd_network_transmit_bytes_total{device="lo",name="bgp-test",project="default",type="container"} 0
+lxd_network_transmit_bytes_total{device="eth0",name="bgp-test",project="default",type="container"} 1149190
+lxd_network_transmit_bytes_total{device="docker0",name="zoneminder",project="default",type="container"} 0
+lxd_network_transmit_bytes_total{device="br-ad39f2cab933",name="zoneminder",project="default",type="container"} 2138801530899
+lxd_network_transmit_bytes_total{device="veth716d100",name="zoneminder",project="default",type="container"} 2138801556447
+lxd_network_transmit_bytes_total{device="eth0",name="zoneminder",project="default",type="container"} 45421224192
+lxd_network_transmit_bytes_total{device="lo",name="zoneminder",project="default",type="container"} 2212
+lxd_network_transmit_bytes_total{device="lo",name="nsec-accounts",project="default",type="container"} 6802
+lxd_network_transmit_bytes_total{device="eth0",name="nsec-accounts",project="default",type="container"} 478386
+lxd_network_transmit_bytes_total{device="lo",name="v1",project="default",type="virtual-machine"} 20154
+lxd_network_transmit_bytes_total{device="enp5s0",name="v1",project="default",type="virtual-machine"} 213141621
+# HELP lxd_network_transmit_drop_total The amount of transmitted dropped bytes on a given interface.
+# TYPE lxd_network_transmit_drop_total counter
+lxd_network_transmit_drop_total{device="lo",name="lxd-build",project="default",type="container"} 0
+lxd_network_transmit_drop_total{device="eth0",name="lxd-build",project="default",type="container"} 0
+lxd_network_transmit_drop_total{device="lo",name="bgp-test",project="default",type="container"} 0
+lxd_network_transmit_drop_total{device="eth0",name="bgp-test",project="default",type="container"} 0
+lxd_network_transmit_drop_total{device="docker0",name="zoneminder",project="default",type="container"} 0
+lxd_network_transmit_drop_total{device="br-ad39f2cab933",name="zoneminder",project="default",type="container"} 0
+lxd_network_transmit_drop_total{device="veth716d100",name="zoneminder",project="default",type="container"} 0
+lxd_network_transmit_drop_total{device="eth0",name="zoneminder",project="default",type="container"} 0
+lxd_network_transmit_drop_total{device="lo",name="zoneminder",project="default",type="container"} 0
+lxd_network_transmit_drop_total{device="lo",name="nsec-accounts",project="default",type="container"} 0
+lxd_network_transmit_drop_total{device="eth0",name="nsec-accounts",project="default",type="container"} 0
+lxd_network_transmit_drop_total{device="lo",name="v1",project="default",type="virtual-machine"} 0
+lxd_network_transmit_drop_total{device="enp5s0",name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_network_transmit_errs_total The amount of transmitted errors on a given interface.
+# TYPE lxd_network_transmit_errs_total counter
+lxd_network_transmit_errs_total{device="lo",name="lxd-build",project="default",type="container"} 0
+lxd_network_transmit_errs_total{device="eth0",name="lxd-build",project="default",type="container"} 0
+lxd_network_transmit_errs_total{device="lo",name="bgp-test",project="default",type="container"} 0
+lxd_network_transmit_errs_total{device="eth0",name="bgp-test",project="default",type="container"} 0
+lxd_network_transmit_errs_total{device="docker0",name="zoneminder",project="default",type="container"} 0
+lxd_network_transmit_errs_total{device="br-ad39f2cab933",name="zoneminder",project="default",type="container"} 0
+lxd_network_transmit_errs_total{device="veth716d100",name="zoneminder",project="default",type="container"} 0
+lxd_network_transmit_errs_total{device="eth0",name="zoneminder",project="default",type="container"} 0
+lxd_network_transmit_errs_total{device="lo",name="zoneminder",project="default",type="container"} 0
+lxd_network_transmit_errs_total{device="lo",name="nsec-accounts",project="default",type="container"} 0
+lxd_network_transmit_errs_total{device="eth0",name="nsec-accounts",project="default",type="container"} 0
+lxd_network_transmit_errs_total{device="lo",name="v1",project="default",type="virtual-machine"} 0
+lxd_network_transmit_errs_total{device="enp5s0",name="v1",project="default",type="virtual-machine"} 0
+# HELP lxd_network_transmit_packets_total The amount of transmitted packets on a given interface.
+# TYPE lxd_network_transmit_packets_total counter
+lxd_network_transmit_packets_total{device="lo",name="lxd-build",project="default",type="container"} 853
+lxd_network_transmit_packets_total{device="eth0",name="lxd-build",project="default",type="container"} 62691
+lxd_network_transmit_packets_total{device="lo",name="bgp-test",project="default",type="container"} 0
+lxd_network_transmit_packets_total{device="eth0",name="bgp-test",project="default",type="container"} 11190
+lxd_network_transmit_packets_total{device="docker0",name="zoneminder",project="default",type="container"} 0
+lxd_network_transmit_packets_total{device="br-ad39f2cab933",name="zoneminder",project="default",type="container"} 950128581
+lxd_network_transmit_packets_total{device="veth716d100",name="zoneminder",project="default",type="container"} 950128945
+lxd_network_transmit_packets_total{device="eth0",name="zoneminder",project="default",type="container"} 673475013
+lxd_network_transmit_packets_total{device="lo",name="zoneminder",project="default",type="container"} 28
+lxd_network_transmit_packets_total{device="lo",name="nsec-accounts",project="default",type="container"} 86
+lxd_network_transmit_packets_total{device="eth0",name="nsec-accounts",project="default",type="container"} 4660
+lxd_network_transmit_packets_total{device="lo",name="v1",project="default",type="virtual-machine"} 206
+lxd_network_transmit_packets_total{device="enp5s0",name="v1",project="default",type="virtual-machine"} 29492
+# HELP lxd_procs_total The number of running processes.
+# TYPE lxd_procs_total counter
+lxd_procs_total{name="lxd-build",project="default",type="container"} 46
+lxd_procs_total{name="bgp-test",project="default",type="container"} 13
+lxd_procs_total{name="zoneminder",project="default",type="container"} 7324
+lxd_procs_total{name="nsec-accounts",project="default",type="container"} 13
+lxd_procs_total{name="v1",project="default",type="virtual-machine"} 21

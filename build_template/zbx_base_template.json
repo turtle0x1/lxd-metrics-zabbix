@@ -1,0 +1,76 @@
+{
+    "zabbix_export": {
+        "version": "5.4",
+        "date": "2021-10-02T23:44:59Z",
+        "groups": [
+            {
+                "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+                "name": "Templates/Applications"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "ccbe3af9a3f8484bbd62816cdeacbc9f",
+                "template": "LXD Metrics",
+                "name": "LXD Metrics",
+                "groups": [
+                    {
+                        "name": "Templates/Applications"
+                    }
+                ],
+                "items": [
+                    {
+                        "uuid": "1b3f669af4f1468984a25277ddd0afcd",
+                        "name": "LXD Metrics",
+                        "type": "HTTP_AGENT",
+                        "key": "metrics",
+                        "delay": "60s",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "url": "{$SCHEME}{$HOST}:{$PORT}{$URL}",
+                        "ssl_cert_file": "{$LXD_METRICS_CERT_PEM}",
+                        "ssl_key_file": "{$LXD_METRICS_KEY_PEM}"
+                    }
+                ],
+                "discovery_rules": [
+                    {
+                        "uuid": "8297a0fd5e1445f6b0c9649c04ddbc3d",
+                        "name": "LXD Metrics",
+                        "type": "DEPENDENT",
+                        "key": "lld_lxd",
+                        "delay": "0",
+                        "item_prototypes": [
+                        ],
+                        "master_item": {
+                            "key": "metrics"
+                        },
+                        "lld_macro_paths": [
+                        ],
+                        "preprocessing": [
+                            {
+                                "type": "PROMETHEUS_TO_JSON",
+                                "parameters": [
+                                    "{__name__=~\".*\"}"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$PORT}",
+                        "value": "8443"
+                    },
+                    {
+                        "macro": "{$SCHEME}",
+                        "value": "https://"
+                    },
+                    {
+                        "macro": "{$URL}",
+                        "value": "/1.0/metrics"
+                    }
+                ]
+            }
+        ]
+    }
+}

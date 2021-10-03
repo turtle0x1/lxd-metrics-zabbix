@@ -1,0 +1,796 @@
+{
+    "zabbix_export": {
+        "version": "5.4",
+        "date": "2021-10-02T23:44:59Z",
+        "groups": [
+            {
+                "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+                "name": "Templates\/Applications"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "ccbe3af9a3f8484bbd62816cdeacbc9f",
+                "template": "LXD Metrics",
+                "name": "LXD Metrics",
+                "groups": [
+                    {
+                        "name": "Templates\/Applications"
+                    }
+                ],
+                "items": [
+                    {
+                        "uuid": "1b3f669af4f1468984a25277ddd0afcd",
+                        "name": "LXD Metrics",
+                        "type": "HTTP_AGENT",
+                        "key": "metrics",
+                        "delay": "60s",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "url": "{$SCHEME}{$HOST}:{$PORT}{$URL}",
+                        "ssl_cert_file": "{$LXD_METRICS_CERT_PEM}",
+                        "ssl_key_file": "{$LXD_METRICS_KEY_PEM}"
+                    }
+                ],
+                "discovery_rules": [
+                    {
+                        "uuid": "8297a0fd5e1445f6b0c9649c04ddbc3d",
+                        "name": "LXD Metrics",
+                        "type": "DEPENDENT",
+                        "key": "lld_lxd",
+                        "delay": "0",
+                        "item_prototypes": [
+                            {
+                                "name": "lxd_cpu_seconds_total {#PROJECT} {#NAME} {#TYPE} {#CPU} {#MODE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_cpu_seconds_total[{#PROJECT} {#NAME} {#TYPE} {#CPU} {#MODE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5a95",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",cpu=\"{#CPU}\",mode=\"{#MODE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_disk_read_bytes_total {#PROJECT} {#NAME} {#TYPE} {#DEVICE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_disk_read_bytes_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5a9d",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_disk_reads_completed_total {#PROJECT} {#NAME} {#TYPE} {#DEVICE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_disk_reads_completed_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5aa2",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_disk_written_bytes_total {#PROJECT} {#NAME} {#TYPE} {#DEVICE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_disk_written_bytes_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5aa6",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_disk_writes_completed_total {#PROJECT} {#NAME} {#TYPE} {#DEVICE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_disk_writes_completed_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5aaa",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_filesystem_avail_bytes {#PROJECT} {#NAME} {#TYPE} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_filesystem_avail_bytes[{#PROJECT} {#NAME} {#TYPE} {#DEVICE} {#FSTYPE} {#MOUNTPOINT}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5ab0",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_filesystem_free_bytes {#PROJECT} {#NAME} {#TYPE} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_filesystem_free_bytes[{#PROJECT} {#NAME} {#TYPE} {#DEVICE} {#FSTYPE} {#MOUNTPOINT}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5ab6",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_filesystem_size_bytes {#PROJECT} {#NAME} {#TYPE} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_filesystem_size_bytes[{#PROJECT} {#NAME} {#TYPE} {#DEVICE} {#FSTYPE} {#MOUNTPOINT}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5abc",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_Active_anon_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_Active_anon_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5abf",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_Active_file_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_Active_file_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5ac2",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_Active_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_Active_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5ac6",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_Cached_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_Cached_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5ac9",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_Dirty_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_Dirty_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5acc",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_HugepagesFree_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_HugepagesFree_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5acf",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_HugepagesTotal_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_HugepagesTotal_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5ad2",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_Inactive_anon_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_Inactive_anon_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5ad5",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_Inactive_file_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_Inactive_file_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5ad9",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_Inactive_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_Inactive_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5adc",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_Mapped_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_Mapped_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5adf",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_MemAvailable_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_MemAvailable_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5ae3",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_MemFree_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_MemFree_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5ae6",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_MemTotal_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_MemTotal_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5ae9",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_RSS_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_RSS_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5aec",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_Shmem_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_Shmem_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5aef",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_Swap_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_Swap_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5af2",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_Unevictable_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_Unevictable_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5af5",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_Writeback_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_Writeback_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5af8",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_network_receive_bytes_total {#PROJECT} {#NAME} {#TYPE} {#DEVICE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_network_receive_bytes_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5afc",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_network_receive_drop_total {#PROJECT} {#NAME} {#TYPE} {#DEVICE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_network_receive_drop_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5b01",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_network_receive_errs_total {#PROJECT} {#NAME} {#TYPE} {#DEVICE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_network_receive_errs_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5b04",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_network_receive_packets_total {#PROJECT} {#NAME} {#TYPE} {#DEVICE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_network_receive_packets_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5b08",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_network_transmit_bytes_total {#PROJECT} {#NAME} {#TYPE} {#DEVICE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_network_transmit_bytes_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5b0c",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_network_transmit_drop_total {#PROJECT} {#NAME} {#TYPE} {#DEVICE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_network_transmit_drop_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5b10",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_network_transmit_errs_total {#PROJECT} {#NAME} {#TYPE} {#DEVICE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_network_transmit_errs_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5b14",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_network_transmit_packets_total {#PROJECT} {#NAME} {#TYPE} {#DEVICE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_network_transmit_packets_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5b18",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_procs_total {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_procs_total[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "61590a7dd5b1c",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            }
+                        ],
+                        "master_item": {
+                            "key": "metrics"
+                        },
+                        "lld_macro_paths": [
+                            {
+                                "lld_macro": "{#METRIC}",
+                                "path": "$['name']"
+                            },
+                            {
+                                "lld_macro": "{#CPU}",
+                                "path": "$.labels['cpu']"
+                            },
+                            {
+                                "lld_macro": "{#MODE}",
+                                "path": "$.labels['mode']"
+                            },
+                            {
+                                "lld_macro": "{#NAME}",
+                                "path": "$.labels['name']"
+                            },
+                            {
+                                "lld_macro": "{#PROJECT}",
+                                "path": "$.labels['project']"
+                            },
+                            {
+                                "lld_macro": "{#TYPE}",
+                                "path": "$.labels['type']"
+                            },
+                            {
+                                "lld_macro": "{#DEVICE}",
+                                "path": "$.labels['device']"
+                            },
+                            {
+                                "lld_macro": "{#FSTYPE}",
+                                "path": "$.labels['fstype']"
+                            },
+                            {
+                                "lld_macro": "{#MOUNTPOINT}",
+                                "path": "$.labels['mountpoint']"
+                            }
+                        ],
+                        "preprocessing": [
+                            {
+                                "type": "PROMETHEUS_TO_JSON",
+                                "parameters": [
+                                    "{__name__=~\".*\"}"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$PORT}",
+                        "value": "8443"
+                    },
+                    {
+                        "macro": "{$SCHEME}",
+                        "value": "https:\/\/"
+                    },
+                    {
+                        "macro": "{$URL}",
+                        "value": "\/1.0\/metrics"
+                    }
+                ]
+            }
+        ]
+    }
+}
