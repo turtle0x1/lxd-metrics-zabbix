@@ -41,6 +41,25 @@
                         "delay": "0",
                         "item_prototypes": [
                             {
+                                "name": "lxd_cpu_seconds_total {#PROJECT} {#NAME} {#TYPE} {#MODE} !{#cpu} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_cpu_seconds_total[{#PROJECT} {#NAME} {#TYPE} {#MODE} !{#cpu}]",
+                                "delay": "0",
+                                "uuid": "615918c08ec08",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "lxd_cpu_seconds_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",mode=\"{#MODE}\",cpu!~\".*\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
                                 "name": "lxd_cpu_seconds_total {#PROJECT} {#NAME} {#TYPE} {#CPU} {#MODE} ",
                                 "type": "DEPENDENT",
                                 "key": "lxd_cpu_seconds_total[{#PROJECT} {#NAME} {#TYPE} {#CPU} {#MODE}]",
@@ -50,7 +69,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",cpu=\"{#CPU}\",mode=\"{#MODE}\"}",
+                                            "lxd_cpu_seconds_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",cpu=\"{#CPU}\",mode=\"{#MODE}\"}",
                                             ""
                                         ]
                                     }
@@ -69,7 +88,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "lxd_disk_read_bytes_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -88,7 +107,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "lxd_disk_reads_completed_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -107,7 +126,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "lxd_disk_written_bytes_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -126,7 +145,26 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "lxd_disk_writes_completed_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_filesystem_avail_bytes {#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_filesystem_avail_bytes[{#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type}]",
+                                "delay": "0",
+                                "uuid": "615918c08ec30",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "lxd_filesystem_avail_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\",type!~\".*\"}",
                                             ""
                                         ]
                                     }
@@ -145,7 +183,26 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
+                                            "lxd_filesystem_avail_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_filesystem_free_bytes {#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_filesystem_free_bytes[{#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type}]",
+                                "delay": "0",
+                                "uuid": "615918c08ec3e",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "lxd_filesystem_free_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\",type!~\".*\"}",
                                             ""
                                         ]
                                     }
@@ -164,7 +221,26 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
+                                            "lxd_filesystem_free_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_filesystem_size_bytes {#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_filesystem_size_bytes[{#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type}]",
+                                "delay": "0",
+                                "uuid": "615918c08ec4b",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "lxd_filesystem_size_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\",type!~\".*\"}",
                                             ""
                                         ]
                                     }
@@ -183,7 +259,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
+                                            "lxd_filesystem_size_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
                                             ""
                                         ]
                                     }
@@ -202,7 +278,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_Active_anon_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -221,7 +297,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_Active_file_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -240,7 +316,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_Active_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -259,7 +335,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_Cached_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -278,7 +354,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_Dirty_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -297,7 +373,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_HugepagesFree_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -316,7 +392,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_HugepagesTotal_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -335,7 +411,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_Inactive_anon_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -354,7 +430,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_Inactive_file_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -373,7 +449,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_Inactive_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -392,7 +468,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_Mapped_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -411,7 +487,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_MemAvailable_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -430,7 +506,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_MemFree_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -449,7 +525,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_MemTotal_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -468,7 +544,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_RSS_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -487,7 +563,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_Shmem_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -506,7 +582,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_Swap_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -525,7 +601,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_Unevictable_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -544,7 +620,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_memory_Writeback_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -563,7 +639,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "lxd_network_receive_bytes_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -582,7 +658,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "lxd_network_receive_drop_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -601,7 +677,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "lxd_network_receive_errs_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -620,7 +696,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "lxd_network_receive_packets_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -639,7 +715,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "lxd_network_transmit_bytes_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -658,7 +734,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "lxd_network_transmit_drop_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -677,7 +753,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "lxd_network_transmit_errs_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -696,7 +772,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "lxd_network_transmit_packets_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -715,7 +791,7 @@
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "{#METRIC}{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "lxd_procs_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -734,10 +810,6 @@
                                 "path": "$['name']"
                             },
                             {
-                                "lld_macro": "{#CPU}",
-                                "path": "$.labels['cpu']"
-                            },
-                            {
                                 "lld_macro": "{#MODE}",
                                 "path": "$.labels['mode']"
                             },
@@ -752,6 +824,10 @@
                             {
                                 "lld_macro": "{#TYPE}",
                                 "path": "$.labels['type']"
+                            },
+                            {
+                                "lld_macro": "{#CPU}",
+                                "path": "$.labels['cpu']"
                             },
                             {
                                 "lld_macro": "{#DEVICE}",

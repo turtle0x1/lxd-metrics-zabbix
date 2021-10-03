@@ -34,5 +34,9 @@
     "lxd_network_transmit_drop_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]": "61590a7dd5b10",
     "lxd_network_transmit_errs_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]": "61590a7dd5b14",
     "lxd_network_transmit_packets_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]": "61590a7dd5b18",
-    "lxd_procs_total[{#PROJECT} {#NAME} {#TYPE}]": "61590a7dd5b1c"
+    "lxd_procs_total[{#PROJECT} {#NAME} {#TYPE}]": "61590a7dd5b1c",
+    "lxd_cpu_seconds_total[{#PROJECT} {#NAME} {#TYPE} {#MODE} !{#cpu}]": "615918c08ec08",
+    "lxd_filesystem_avail_bytes[{#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type}]": "615918c08ec30",
+    "lxd_filesystem_free_bytes[{#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type}]": "615918c08ec3e",
+    "lxd_filesystem_size_bytes[{#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type}]": "615918c08ec4b"
 }

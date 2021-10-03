@@ -9,6 +9,9 @@ $typeKeys = [];
 
 // Parse the metric sample for unique keys foreach TYPE
 foreach ($lines as $line) {
+    if ($line == "") {
+        continue;
+    }
     if (strpos($line, '# HELP') === 0) {
         continue;
     }
@@ -31,8 +34,10 @@ foreach ($lines as $line) {
     // Parse paramaters as HTTP query string
     $o = [];
     parse_str($x, $o);
-    // Store all the keys seen for this type
-    $typeKeys[$currentType] = array_merge(array_keys($o), $typeKeys[$currentType]);
+    // Store all the key combinations seen for this type
+    $keys = array_keys($o);
+    $strVersion = implode($keys);
+    $typeKeys[$currentType][$strVersion] = $keys;
 }
 
 $zabbixItems = [];
@@ -53,70 +58,95 @@ $allSeenKeys = [];
 
 $zabbixItemUniqueIds = json_decode(file_get_contents(__DIR__ . "/uniqueIds.json"), true);
 
-foreach ($typeKeys as $type => $keys) {
-    $uniqueKeys = array_unique($keys);
+foreach ($typeKeys as $type => $t) {
+    $allTypes = [];
+    foreach ($t as $types) {
+        $allTypes = array_merge($types, $allTypes);
+    }
+    $allTypes = array_unique($allTypes);
 
-    $allSeenKeys = array_merge($allSeenKeys, $uniqueKeys);
+    $shortKeys = array_keys($t);
 
-    usort($uniqueKeys, function ($a, $b) {
-        // Get some consistent ordering going on
-        $typeWeights = [
-            "project"=>1,
-            "name"=>2,
-            "type"=>3,
-            "device"=>4,
-            "cpu"=>5,
-            "mode"=>6
-        ];
-
-        $aWeight = isset($typeWeights[$a]) ? $typeWeights[$a] : 999999999;
-        $bWeight = isset($typeWeights[$b]) ? $typeWeights[$b] : 999999999;
-
-        return $aWeight > $bWeight;
+    usort($shortKeys, function ($a, $b) {
+        return strlen($a) > strlen($b);
     });
 
-    $zabbixItemName = "$type ";
-    $zabbixItemKey = $type . '[';
-    $zabbixPreProcessPattern = '{#METRIC}' . '{';
+    foreach ($shortKeys as $key) {
+        // foreach ( as $d => $keys) {
+        $uniqueKeys = $t[$key];
 
-    foreach ($uniqueKeys as $key) {
-        $zabbixPreProcessPattern .= $key . '="';
-        $key = strtoupper($key);
-        $zabbixPreProcessPattern .= '{#' . $key . '}",';
-        $zabbixItemName .= "{#$key} ";
-        $zabbixItemKey .= "{#$key} ";
-    }
+        $notSeen = array_diff($allTypes, $uniqueKeys);
 
-    $zabbixItemKey = rtrim($zabbixItemKey);
-    $zabbixPreProcessPattern = str_lreplace(",", "", $zabbixPreProcessPattern);
-    $zabbixPreProcessPattern = rtrim($zabbixPreProcessPattern);
+        $allSeenKeys = array_merge($allSeenKeys, $uniqueKeys);
 
-    $zabbixItemKey .= "]";
-    $zabbixPreProcessPattern .= "}";
+        usort($uniqueKeys, function ($a, $b) {
+            // Get some consistent ordering going on
+            $typeWeights = [
+                "project"=>1,
+                "name"=>2,
+                "type"=>3,
+                "device"=>4,
+                "cpu"=>5,
+                "mode"=>6
+            ];
 
-    $uniqueId = isset($zabbixItemUniqueIds[$zabbixItemKey]) ? $zabbixItemUniqueIds[$zabbixItemKey] : uniqid();
+            $aWeight = isset($typeWeights[$a]) ? $typeWeights[$a] : 999999999;
+            $bWeight = isset($typeWeights[$b]) ? $typeWeights[$b] : 999999999;
 
-    $zabbixItemUniqueIds[$zabbixItemKey] = $uniqueId;
+            return $aWeight > $bWeight;
+        });
 
-    $zabbixItems[] = [
-        "name"=>$zabbixItemName,
-        "type"=>"DEPENDENT",
-        "key" => $zabbixItemKey,
-        "delay"=>'0',
-        "uuid"=>$uniqueId,
-        "preprocessing"=>[
-            [
-                "type"=>"PROMETHEUS_PATTERN",
-                "parameters"=>[
-                    $zabbixPreProcessPattern,
-                    ""
+        $zabbixItemName = "$type ";
+        $zabbixItemKey = $type . '[';
+        $zabbixPreProcessPattern = $type . '{';
+
+        foreach ($uniqueKeys as $key) {
+            $zabbixPreProcessPattern .= $key . '="';
+            $key = strtoupper($key);
+            $zabbixPreProcessPattern .= '{#' . $key . '}",';
+            $zabbixItemName .= "{#$key} ";
+            $zabbixItemKey .= "{#$key} ";
+        }
+
+        foreach ($notSeen as $key) {
+            $zabbixPreProcessPattern .= ',' . $key . '!~".*"';
+            strtoupper($key);
+            $zabbixItemName .= "!{#$key} ";
+            $zabbixItemKey .= "!{#$key} ";
+        }
+
+        $zabbixItemKey = rtrim($zabbixItemKey);
+        $zabbixPreProcessPattern = str_lreplace(",", "", $zabbixPreProcessPattern);
+        $zabbixPreProcessPattern = rtrim($zabbixPreProcessPattern);
+
+        $zabbixItemKey .= "]";
+        $zabbixPreProcessPattern .= "}";
+
+        $uniqueId = isset($zabbixItemUniqueIds[$zabbixItemKey]) ? $zabbixItemUniqueIds[$zabbixItemKey] : uniqid();
+
+        $zabbixItemUniqueIds[$zabbixItemKey] = $uniqueId;
+
+        $zabbixItems[] = [
+            "name"=>$zabbixItemName,
+            "type"=>"DEPENDENT",
+            "key" => $zabbixItemKey,
+            "delay"=>'0',
+            "uuid"=>$uniqueId,
+            "preprocessing"=>[
+                [
+                    "type"=>"PROMETHEUS_PATTERN",
+                    "parameters"=>[
+                        $zabbixPreProcessPattern,
+                        ""
+                    ]
                 ]
+            ],
+            "master_item"=>[
+              "key"=>"metrics"
             ]
-        ],
-        "master_item"=>[
-          "key"=>"metrics"
-        ]
-    ];
+        ];
+        // }
+    }
 }
 
 $uniqueKeys = array_unique($allSeenKeys);
