@@ -1,6 +1,6 @@
 # LXD Metrics Zabbix Template
 
-Right now this is early stages and might have bugs, tested on zabbix 5.4.5.
+Right now this is early stages and has bugs, **dont use this**.
 
 Low level discovery template for Zabbix to import metrics data from LXD.
 
