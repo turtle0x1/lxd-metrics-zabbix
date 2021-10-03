@@ -19,9 +19,10 @@ Right now this is early stages and might have bugs, tested on zabbix 5.4.5.
 Edit your zabbix server conf (ubuntu: `/etc/zabbix/zabbix_server.conf`) and make
 sure the following variables are uncommented and set to a location.
 
-**Remeber this location, you'll need it later**
+*Remeber this location, you'll need it later*
 
 `SSLCertLocation=/home/zabbix`
+
 `SSLKeyLocation=/home/zabbix`
 
 Then restart zabbix `service zabbix-server restart`
@@ -61,7 +62,7 @@ Attach the  template to the host
 
 As mentioned above you'll need to set some macros for the host;
 
-> > Configuration -> Hosts -> find & click your host -> Macros
+> Configuration -> Hosts -> find & click your host -> Macros
 
 | Variable | Desired Value |
 | -------- | ------------- |
