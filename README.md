@@ -63,7 +63,7 @@ Attach the  template to the host
 
 As mentioned above you'll need to set some macros for the host;
 
-> > Configuration -> Hosts -> find & click your host -> Macros
+> Configuration -> Hosts -> find & click your host -> Macros
 
 | Variable | Desired Value |
 | -------- | ------------- |
@@ -72,4 +72,4 @@ As mentioned above you'll need to set some macros for the host;
 | LXD_METRICS_KEY_PEM  | The name of the `.key` file above (not full path, just file name) |
 
 ### 7. Wait and view your data
-Updates every 60 seconds, so give it 5 minutes and see what you can see.
+Updates every 60 seconds and it takes a few minutes to load the initial items.
