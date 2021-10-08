@@ -41,35 +41,16 @@
                         "delay": "0",
                         "item_prototypes": [
                             {
-                                "name": "lxd_cpu_seconds_total {#PROJECT} {#NAME} {#TYPE} {#MODE} !{#cpu} ",
-                                "type": "DEPENDENT",
-                                "key": "lxd_cpu_seconds_total[{#PROJECT} {#NAME} {#TYPE} {#MODE} !{#cpu}]",
-                                "delay": "0",
-                                "uuid": "615918c08ec08",
-                                "preprocessing": [
-                                    {
-                                        "type": "PROMETHEUS_PATTERN",
-                                        "parameters": [
-                                            "lxd_cpu_seconds_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",mode=\"{#MODE}\",cpu!~\".*\"}",
-                                            ""
-                                        ]
-                                    }
-                                ],
-                                "master_item": {
-                                    "key": "metrics"
-                                }
-                            },
-                            {
                                 "name": "lxd_cpu_seconds_total {#PROJECT} {#NAME} {#TYPE} {#CPU} {#MODE} ",
                                 "type": "DEPENDENT",
                                 "key": "lxd_cpu_seconds_total[{#PROJECT} {#NAME} {#TYPE} {#CPU} {#MODE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5a95",
+                                "uuid": "615de7a7c40b5",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_cpu_seconds_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",cpu=\"{#CPU}\",mode=\"{#MODE}\"}",
+                                            "{__name__=\"lxd_cpu_seconds_total\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",cpu=\"{#CPU}\",mode=\"{#MODE}\"}",
                                             ""
                                         ]
                                     }
@@ -83,12 +64,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_disk_read_bytes_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5a9d",
+                                "uuid": "615de7a7c40be",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_disk_read_bytes_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "{__name__=\"lxd_disk_read_bytes_total\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -102,12 +83,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_disk_reads_completed_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5aa2",
+                                "uuid": "615de7a7c40c3",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_disk_reads_completed_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "{__name__=\"lxd_disk_reads_completed_total\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -121,12 +102,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_disk_written_bytes_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5aa6",
+                                "uuid": "615de7a7c40c8",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_disk_written_bytes_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "{__name__=\"lxd_disk_written_bytes_total\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -140,12 +121,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_disk_writes_completed_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5aaa",
+                                "uuid": "615de7a7c40cd",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_disk_writes_completed_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "{__name__=\"lxd_disk_writes_completed_total\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -155,16 +136,16 @@
                                 }
                             },
                             {
-                                "name": "lxd_filesystem_avail_bytes {#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type} ",
+                                "name": "lxd_filesystem_avail_bytes {#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} ",
                                 "type": "DEPENDENT",
-                                "key": "lxd_filesystem_avail_bytes[{#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type}]",
+                                "key": "lxd_filesystem_avail_bytes[{#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT}]",
                                 "delay": "0",
-                                "uuid": "615918c08ec30",
+                                "uuid": "615de7a7c40d3",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_filesystem_avail_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\",type!~\".*\"}",
+                                            "{__name__=\"lxd_filesystem_avail_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
                                             ""
                                         ]
                                     }
@@ -174,16 +155,16 @@
                                 }
                             },
                             {
-                                "name": "lxd_filesystem_avail_bytes {#PROJECT} {#NAME} {#TYPE} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} ",
+                                "name": "lxd_filesystem_free_bytes {#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} ",
                                 "type": "DEPENDENT",
-                                "key": "lxd_filesystem_avail_bytes[{#PROJECT} {#NAME} {#TYPE} {#DEVICE} {#FSTYPE} {#MOUNTPOINT}]",
+                                "key": "lxd_filesystem_free_bytes[{#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5ab0",
+                                "uuid": "615de7a7c40d8",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_filesystem_avail_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
+                                            "{__name__=\"lxd_filesystem_free_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
                                             ""
                                         ]
                                     }
@@ -193,73 +174,16 @@
                                 }
                             },
                             {
-                                "name": "lxd_filesystem_free_bytes {#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type} ",
+                                "name": "lxd_filesystem_size_bytes {#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} ",
                                 "type": "DEPENDENT",
-                                "key": "lxd_filesystem_free_bytes[{#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type}]",
+                                "key": "lxd_filesystem_size_bytes[{#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT}]",
                                 "delay": "0",
-                                "uuid": "615918c08ec3e",
+                                "uuid": "615de7a7c40dd",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_filesystem_free_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\",type!~\".*\"}",
-                                            ""
-                                        ]
-                                    }
-                                ],
-                                "master_item": {
-                                    "key": "metrics"
-                                }
-                            },
-                            {
-                                "name": "lxd_filesystem_free_bytes {#PROJECT} {#NAME} {#TYPE} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} ",
-                                "type": "DEPENDENT",
-                                "key": "lxd_filesystem_free_bytes[{#PROJECT} {#NAME} {#TYPE} {#DEVICE} {#FSTYPE} {#MOUNTPOINT}]",
-                                "delay": "0",
-                                "uuid": "61590a7dd5ab6",
-                                "preprocessing": [
-                                    {
-                                        "type": "PROMETHEUS_PATTERN",
-                                        "parameters": [
-                                            "lxd_filesystem_free_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
-                                            ""
-                                        ]
-                                    }
-                                ],
-                                "master_item": {
-                                    "key": "metrics"
-                                }
-                            },
-                            {
-                                "name": "lxd_filesystem_size_bytes {#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type} ",
-                                "type": "DEPENDENT",
-                                "key": "lxd_filesystem_size_bytes[{#PROJECT} {#NAME} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} !{#type}]",
-                                "delay": "0",
-                                "uuid": "615918c08ec4b",
-                                "preprocessing": [
-                                    {
-                                        "type": "PROMETHEUS_PATTERN",
-                                        "parameters": [
-                                            "lxd_filesystem_size_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\",type!~\".*\"}",
-                                            ""
-                                        ]
-                                    }
-                                ],
-                                "master_item": {
-                                    "key": "metrics"
-                                }
-                            },
-                            {
-                                "name": "lxd_filesystem_size_bytes {#PROJECT} {#NAME} {#TYPE} {#DEVICE} {#FSTYPE} {#MOUNTPOINT} ",
-                                "type": "DEPENDENT",
-                                "key": "lxd_filesystem_size_bytes[{#PROJECT} {#NAME} {#TYPE} {#DEVICE} {#FSTYPE} {#MOUNTPOINT}]",
-                                "delay": "0",
-                                "uuid": "61590a7dd5abc",
-                                "preprocessing": [
-                                    {
-                                        "type": "PROMETHEUS_PATTERN",
-                                        "parameters": [
-                                            "lxd_filesystem_size_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
+                                            "{__name__=\"lxd_filesystem_size_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",device=\"{#DEVICE}\",fstype=\"{#FSTYPE}\",mountpoint=\"{#MOUNTPOINT}\"}",
                                             ""
                                         ]
                                     }
@@ -273,12 +197,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_Active_anon_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5abf",
+                                "uuid": "615de7a7c40e1",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_Active_anon_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_Active_anon_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -292,12 +216,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_Active_file_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5ac2",
+                                "uuid": "615de7a7c40e5",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_Active_file_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_Active_file_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -311,12 +235,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_Active_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5ac6",
+                                "uuid": "615de7a7c40e9",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_Active_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_Active_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -330,12 +254,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_Cached_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5ac9",
+                                "uuid": "615de7a7c40ec",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_Cached_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_Cached_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -349,50 +273,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_Dirty_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5acc",
+                                "uuid": "615de7a7c40f0",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_Dirty_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
-                                            ""
-                                        ]
-                                    }
-                                ],
-                                "master_item": {
-                                    "key": "metrics"
-                                }
-                            },
-                            {
-                                "name": "lxd_memory_HugepagesFree_bytes {#PROJECT} {#NAME} {#TYPE} ",
-                                "type": "DEPENDENT",
-                                "key": "lxd_memory_HugepagesFree_bytes[{#PROJECT} {#NAME} {#TYPE}]",
-                                "delay": "0",
-                                "uuid": "61590a7dd5acf",
-                                "preprocessing": [
-                                    {
-                                        "type": "PROMETHEUS_PATTERN",
-                                        "parameters": [
-                                            "lxd_memory_HugepagesFree_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
-                                            ""
-                                        ]
-                                    }
-                                ],
-                                "master_item": {
-                                    "key": "metrics"
-                                }
-                            },
-                            {
-                                "name": "lxd_memory_HugepagesTotal_bytes {#PROJECT} {#NAME} {#TYPE} ",
-                                "type": "DEPENDENT",
-                                "key": "lxd_memory_HugepagesTotal_bytes[{#PROJECT} {#NAME} {#TYPE}]",
-                                "delay": "0",
-                                "uuid": "61590a7dd5ad2",
-                                "preprocessing": [
-                                    {
-                                        "type": "PROMETHEUS_PATTERN",
-                                        "parameters": [
-                                            "lxd_memory_HugepagesTotal_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_Dirty_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -406,12 +292,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_Inactive_anon_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5ad5",
+                                "uuid": "615de7a7c40f4",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_Inactive_anon_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_Inactive_anon_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -425,12 +311,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_Inactive_file_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5ad9",
+                                "uuid": "615de7a7c40f8",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_Inactive_file_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_Inactive_file_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -444,31 +330,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_Inactive_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5adc",
+                                "uuid": "615de7a7c40fb",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_Inactive_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
-                                            ""
-                                        ]
-                                    }
-                                ],
-                                "master_item": {
-                                    "key": "metrics"
-                                }
-                            },
-                            {
-                                "name": "lxd_memory_Mapped_bytes {#PROJECT} {#NAME} {#TYPE} ",
-                                "type": "DEPENDENT",
-                                "key": "lxd_memory_Mapped_bytes[{#PROJECT} {#NAME} {#TYPE}]",
-                                "delay": "0",
-                                "uuid": "61590a7dd5adf",
-                                "preprocessing": [
-                                    {
-                                        "type": "PROMETHEUS_PATTERN",
-                                        "parameters": [
-                                            "lxd_memory_Mapped_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_Inactive_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -482,12 +349,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_MemAvailable_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5ae3",
+                                "uuid": "615de7a7c40ff",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_MemAvailable_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_MemAvailable_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -501,12 +368,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_MemFree_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5ae6",
+                                "uuid": "615de7a7c4103",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_MemFree_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_MemFree_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -520,12 +387,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_MemTotal_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5ae9",
+                                "uuid": "615de7a7c4106",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_MemTotal_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_MemTotal_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -539,12 +406,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_RSS_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5aec",
+                                "uuid": "615de7a7c410a",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_RSS_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_RSS_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -558,31 +425,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_Shmem_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5aef",
+                                "uuid": "615de7a7c410e",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_Shmem_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
-                                            ""
-                                        ]
-                                    }
-                                ],
-                                "master_item": {
-                                    "key": "metrics"
-                                }
-                            },
-                            {
-                                "name": "lxd_memory_Swap_bytes {#PROJECT} {#NAME} {#TYPE} ",
-                                "type": "DEPENDENT",
-                                "key": "lxd_memory_Swap_bytes[{#PROJECT} {#NAME} {#TYPE}]",
-                                "delay": "0",
-                                "uuid": "61590a7dd5af2",
-                                "preprocessing": [
-                                    {
-                                        "type": "PROMETHEUS_PATTERN",
-                                        "parameters": [
-                                            "lxd_memory_Swap_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_Shmem_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -596,12 +444,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_Unevictable_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5af5",
+                                "uuid": "615de7a7c4111",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_Unevictable_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_Unevictable_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -615,12 +463,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_memory_Writeback_bytes[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5af8",
+                                "uuid": "615de7a7c4115",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_memory_Writeback_bytes{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_memory_Writeback_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -634,12 +482,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_network_receive_bytes_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5afc",
+                                "uuid": "615de7a7c4119",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_network_receive_bytes_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "{__name__=\"lxd_network_receive_bytes_total\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -653,12 +501,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_network_receive_drop_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5b01",
+                                "uuid": "615de7a7c411e",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_network_receive_drop_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "{__name__=\"lxd_network_receive_drop_total\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -672,12 +520,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_network_receive_errs_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5b04",
+                                "uuid": "615de7a7c4122",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_network_receive_errs_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "{__name__=\"lxd_network_receive_errs_total\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -691,12 +539,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_network_receive_packets_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5b08",
+                                "uuid": "615de7a7c4126",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_network_receive_packets_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "{__name__=\"lxd_network_receive_packets_total\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -710,12 +558,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_network_transmit_bytes_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5b0c",
+                                "uuid": "615de7a7c412b",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_network_transmit_bytes_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "{__name__=\"lxd_network_transmit_bytes_total\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -729,12 +577,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_network_transmit_drop_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5b10",
+                                "uuid": "615de7a7c412f",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_network_transmit_drop_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "{__name__=\"lxd_network_transmit_drop_total\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -748,12 +596,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_network_transmit_errs_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5b14",
+                                "uuid": "615de7a7c4133",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_network_transmit_errs_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "{__name__=\"lxd_network_transmit_errs_total\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -767,12 +615,12 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_network_transmit_packets_total[{#PROJECT} {#NAME} {#TYPE} {#DEVICE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5b18",
+                                "uuid": "615de7a7c4138",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_network_transmit_packets_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
+                                            "{__name__=\"lxd_network_transmit_packets_total\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\",device=\"{#DEVICE}\"}",
                                             ""
                                         ]
                                     }
@@ -786,12 +634,31 @@
                                 "type": "DEPENDENT",
                                 "key": "lxd_procs_total[{#PROJECT} {#NAME} {#TYPE}]",
                                 "delay": "0",
-                                "uuid": "61590a7dd5b1c",
+                                "uuid": "615de7a7c413b",
                                 "preprocessing": [
                                     {
                                         "type": "PROMETHEUS_PATTERN",
                                         "parameters": [
-                                            "lxd_procs_total{project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            "{__name__=\"lxd_procs_total\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
+                                            ""
+                                        ]
+                                    }
+                                ],
+                                "master_item": {
+                                    "key": "metrics"
+                                }
+                            },
+                            {
+                                "name": "lxd_memory_Mapped_bytes {#PROJECT} {#NAME} {#TYPE} ",
+                                "type": "DEPENDENT",
+                                "key": "lxd_memory_Mapped_bytes[{#PROJECT} {#NAME} {#TYPE}]",
+                                "delay": "0",
+                                "uuid": "616055b377abf",
+                                "preprocessing": [
+                                    {
+                                        "type": "PROMETHEUS_PATTERN",
+                                        "parameters": [
+                                            "{__name__=\"lxd_memory_Mapped_bytes\",project=\"{#PROJECT}\",name=\"{#NAME}\",type=\"{#TYPE}\"}",
                                             ""
                                         ]
                                     }
@@ -810,6 +677,10 @@
                                 "path": "$['name']"
                             },
                             {
+                                "lld_macro": "{#CPU}",
+                                "path": "$.labels['cpu']"
+                            },
+                            {
                                 "lld_macro": "{#MODE}",
                                 "path": "$.labels['mode']"
                             },
@@ -824,10 +695,6 @@
                             {
                                 "lld_macro": "{#TYPE}",
                                 "path": "$.labels['type']"
-                            },
-                            {
-                                "lld_macro": "{#CPU}",
-                                "path": "$.labels['cpu']"
                             },
                             {
                                 "lld_macro": "{#DEVICE}",

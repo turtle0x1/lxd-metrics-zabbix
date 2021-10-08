@@ -98,7 +98,7 @@ foreach ($typeKeys as $type => $t) {
 
         $zabbixItemName = "$type ";
         $zabbixItemKey = $type . '[';
-        $zabbixPreProcessPattern = $type . '{';
+        $zabbixPreProcessPattern = '{__name__="' . $type . '",';
 
         foreach ($uniqueKeys as $key) {
             $zabbixPreProcessPattern .= $key . '="';
